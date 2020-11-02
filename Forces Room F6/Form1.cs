@@ -46,5 +46,9 @@ namespace Forces_Room_F6
 
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
