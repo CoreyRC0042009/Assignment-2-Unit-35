@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="Resources\cuboid_y2hgis.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sphere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cone.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
