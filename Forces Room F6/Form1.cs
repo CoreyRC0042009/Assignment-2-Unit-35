@@ -26,7 +26,7 @@ namespace Forces_Room_F6
         {
             try
             {
-                // Read from textboxes
+                // Read from textboxes, finds volume of the cuboid
                 double Length = double.Parse(textBox1.Text);
                 double Width = double.Parse(textBox2.Text);
                 double Height = double.Parse(textBox3.Text);
@@ -50,11 +50,12 @@ namespace Forces_Room_F6
         {
             try
             {
-                //Reads whats in the textboxes
+                //Reads whats in the textboxes finds volume of the sphere
                 double Radius = double.Parse(textBox4.Text);
                 double Volume = 4 * Radius * Radius * Radius * 3.14159 / 3;
                 label7.Text = "Volume =" + Volume;
             }
+            //using try catch in case there are any letters or words being typed
             catch
             {
                 MessageBox.Show("Error not a number.");
@@ -66,7 +67,7 @@ namespace Forces_Room_F6
         {
             try
             {
-                //This button works out surface area
+                //This button works out surface area for the cuboid
                 double Length = double.Parse(textBox1.Text);
                 double Width = double.Parse(textBox2.Text);
                 double Height = double.Parse(textBox3.Text);
@@ -77,7 +78,7 @@ namespace Forces_Room_F6
                 label5.Text = "SurfaceArea =" + SurfaceArea;
 
             }
-            //Using try catch to output an error message
+            //Using try catch to output an error message if words/ letters are typed in 
             catch
             {
                 MessageBox.Show("Error not a number");
@@ -107,12 +108,14 @@ namespace Forces_Room_F6
             try
             {
                 //Reads whats in the textboxes
+                //This code works out the Surface Area when a number is typed in the radius textbox 
                 double Radius = double.Parse(textBox4.Text);
                 double SurfaceArea = 4 * 3.1415 * Radius * Radius;
                 label8.Text = ("SurfaceArea =") + SurfaceArea;
             }
             catch
             {
+                //ensures no words/ letters are typed into the textboxs, will display an error message if there is
                 MessageBox.Show("Error not a number");
             }
         }
@@ -131,6 +134,7 @@ namespace Forces_Room_F6
         {
             try
             {
+                //Finds the volume of the cone when values are typed into the radius and height textbox
                 double Radius = double.Parse(textBox5.Text);
                 double Height = double.Parse(textBox6.Text);
                 double Volume = 1 * 3.14159 * Radius * Radius * Height / 3;
@@ -138,6 +142,7 @@ namespace Forces_Room_F6
             }
             catch
             {
+                // this ensures that letters/ words arent typed in the textboxes and will display an eroor message if there is
                 MessageBox.Show("Error not a number");
             }
         }
@@ -151,19 +156,21 @@ namespace Forces_Room_F6
         {
             try
             {
+                //finds the surface area of the cone when values are typed into the radius and height textbox
                 double Radius = double.Parse(textBox5.Text);
                 double Height = double.Parse(textBox6.Text);
                 double SurfaceArea = 3.14159 * Radius * (Radius * Math.Sqrt(Radius * Radius * Height * Height));
             }
             catch
             {
+                //This try catch method is in place to ensure words/ letters arent typed in the textboxes
                 MessageBox.Show("Error not a number");
             }
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-
+            //this is the image of the sphere
         }
     }
 }
