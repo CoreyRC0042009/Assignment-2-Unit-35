@@ -121,5 +121,44 @@ namespace Forces_Room_F6
         {
 
         }
+
+        private void TextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double Radius = double.Parse(textBox5.Text);
+                double Height = double.Parse(textBox6.Text);
+                double Volume = 1 * 3.14159 * Radius * Radius * Height / 3;
+                label11.Text = ("Volume =") + Volume;
+            }
+            catch
+            {
+                MessageBox.Show("Error not a number");
+            }
+        }
+
+        private void Label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double Radius = double.Parse(textBox5.Text);
+                double Height = double.Parse(textBox6.Text);
+                double SurfaceArea = 3.14159 * Radius * (Radius * Math.Sqrt(Radius * Radius * Height * Height));
+            }
+            catch
+            {
+                MessageBox.Show("Error not a number");
+            }
+        }
     }
 }
