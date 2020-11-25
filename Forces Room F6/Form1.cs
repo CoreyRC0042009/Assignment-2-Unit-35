@@ -159,7 +159,8 @@ namespace Forces_Room_F6
                 //finds the surface area of the cone when values are typed into the radius and height textbox
                 double Radius = double.Parse(textBox5.Text);
                 double Height = double.Parse(textBox6.Text);
-                double SurfaceArea = 3.14159 * Radius * (Radius * Math.Sqrt(Radius * Radius * Height * Height));
+                double SurfaceArea = 3.14159 * Radius * (Radius + Math.Sqrt(Radius * Radius * Height * Height));
+                label12.Text = ("SurfaceArea =") + SurfaceArea;
             }
             catch
             {
